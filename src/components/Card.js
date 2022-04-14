@@ -9,8 +9,8 @@ export const ElementCard = ({ id, Weight, Components, type, name, price }) => {
     const { actions } = useContext(Context)
 
     const add = () => {
-        actions.sumItems(name, price)
-        console.log(price)
+        actions.getAct(name, price)
+        
     }
     return (
         <div className="col col-sm-6 col-md-4">

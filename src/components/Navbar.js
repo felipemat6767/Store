@@ -9,7 +9,7 @@ export const Navbar = () => {
     return (
       <div key={items} >
         <li key={items}>
-          <i className="fas fa-trash-alt" onClick={() => { actions.removerItem(items, index) }}></i>
+          <i className="fas fa-trash-alt" onClick={() => { actions.removerItem(items, index); actions.itemrestar() }}></i>
           {items}</li>
       </div>
     )
@@ -17,6 +17,7 @@ export const Navbar = () => {
   
   useEffect(() => {
     actions.getItem()
+
   }, [])
 
 
