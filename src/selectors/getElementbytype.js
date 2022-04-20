@@ -2,7 +2,7 @@ import React from 'react'
 import { Weapons_Armor } from '../data/WeaponArmor'
 
 export const getElementbytype = (type) => {
-  const validtype = ["Ursine", "Feline"]
+  const validtype = ["Ursine-Armor", "Feline-Armor"]
   if (validtype.includes(type)) {
     return Weapons_Armor.filter(element =>
       element.type === type

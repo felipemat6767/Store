@@ -4,13 +4,11 @@ import { Context } from '../store/appContext'
 
 
 
-export const ElementCard = ({ id, Weight, Components, type, name, price }) => {
+export const ElementCard = ({ id, weight, Components, type, name, price }) => {
     const imagepath = `../images/${id}.jpg`
     const { actions } = useContext(Context)
-
     const add = () => {
         actions.getAct(name, price)
-        
     }
     return (
         <div className="col col-sm-6 col-md-4">
@@ -22,9 +20,9 @@ export const ElementCard = ({ id, Weight, Components, type, name, price }) => {
                     <div className='col-md-8'>
                         <div className='card-body'>
                             <h5 className="card-title">{name}</h5>
-                            <p className="card-text">{price}</p>
-                            <p className="card-text">{Weight}</p>
-                            <p className="card-text">{type}</p>
+                            <p className="card-text">Price: {price}</p>
+                            <p className="card-text">Weight: {weight}</p>
+                            <p className="card-text">Type: {type}</p>
                             <Link to={`/info/${name}`} className="btn btn-primary">More Info</Link>
                             <br></br>
                             <div className="btn btn-primary mt-1" onClick={add}>Add</div>

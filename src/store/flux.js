@@ -7,9 +7,7 @@ export const getState = ({ setStore, getStore, getActions }) => {
             valoritem: "",
             price: 0,
             valortot:0,
-            result:{
-                text: ""
-            }
+           
         },
 
         actions: {
@@ -22,20 +20,20 @@ export const getState = ({ setStore, getStore, getActions }) => {
                 setStore({ total: store.total })
             },
             
-            sumItems: (item) => {
+            additems: (item) => {
                 const store = getStore();
                 setStore({ valoritem: store.valoritem = item })
             },
 
-            sumPrice:(price) => {
+            addPrice:(price) => {
                 const store = getStore();
                 setStore({ price: store.price = price})
             },
 
             getAct: (item1, item2) => {
                 const action = getActions()
-                action.sumItems(item1)
-                action.sumPrice(item2)
+                action.additems(item1)
+                action.addPrice(item2)
                 const store = getStore();
                 setStore({total: store.total.concat(store.valoritem + ": " + parseInt(store.price))})
                 setStore({result: store.result.text = item1})

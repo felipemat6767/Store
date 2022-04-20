@@ -4,17 +4,23 @@ import { Context } from '../store/appContext'
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context)
- 
+
   const item = store.total.map((items, index) => {
     return (
       <div key={items} >
-        <li key={items}>
-          <i className="fas fa-trash-alt" onClick={() => { actions.removerItem(items, index); actions.itemrestar() }}></i>
-          {items}</li>
+        <li key={items} className="d-flex">
+          {items}
+          <i className="fas fa-trash-alt mx-1"
+            onClick={() => { actions.removerItem(items, index) }}>
+          </i>
+          <hr></hr>
+        </li>
       </div>
     )
   })
-  
+
+
+
   useEffect(() => {
     actions.getItem()
 
@@ -44,9 +50,11 @@ export const Navbar = () => {
             <span className="p-2 length">{item.length}</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
+            <div className="dropdown-item p-0">
+              <div className='p-1'>{item}</div>
 
-            <div className="dropdown-item pr-1">{item}</div>
-            <hr></hr>
+            </div>
+
             <div className='mx-4'>Precio Total: {store.valortot}</div>
           </ul>
         </div>

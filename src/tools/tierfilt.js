@@ -1,15 +1,14 @@
-import React from 'react'
 import { ElementCard } from '../components/Card'
-import { getelementbyCategory } from '../selectors/getelementbyCategory'
+import { getelementbyTier } from '../selectors/getElementbyTier'
 import { getElementbytype } from '../selectors/getElementbytype'
 
 
-export const Toolslist = ({ category }) => {
-    const tools = getelementbyCategory(category)
+export const Tierfilt = ({ tier }) => {
+    const Tier = getelementbyTier(tier)
     return (
         <>
             <div className='row rows-cols-1 row-cols-md-3 g-3'>
-                {tools.map(item => (
+                {Tier.map(item => (
                     < ElementCard key={item.id}
                         {...item} />
                 ))}

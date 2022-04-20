@@ -3,7 +3,7 @@ export const Weapons_Armor= [
         'id': 'UrsineArmor',
         "name":"Ursine Armor",
         "Category": "Armor",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         'weight':'4.19', 
         "price": 120,
         'Components':"1 × Shirt; 2 × Hardened leather; 1 × Dark steel plate; 4 × Linen; 1 × Monster bone",
@@ -13,7 +13,7 @@ export const Weapons_Armor= [
     {
         'id': 'UrsineBoots',
         "name": "Ursine Boots",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'1.74', 
         "price": 100,
@@ -23,7 +23,7 @@ export const Weapons_Armor= [
     {
         'id': 'UrsineGauntlet',
         "name": "Ursine Gauntlet",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'2.14', 
         "price": 105,
@@ -33,7 +33,7 @@ export const Weapons_Armor= [
     {
         'id': 'UrsineTrousers',
         "name": "Ursine Trousers",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'1.73', 
         "price": 110,
@@ -43,7 +43,7 @@ export const Weapons_Armor= [
     {
         'id': 'UrsineSilverSword',
         "name": "Ursine Silver Sword",
-        'type':'Ursine', 
+        'type':'Ursine-Weapon', 
         "Category": "Weapon",
         'weight':'2.29', 
         "price": 160,
@@ -53,7 +53,7 @@ export const Weapons_Armor= [
     {
         'id': 'UrsineSteelSword',
         "name":"Ursine Steel Sword",
-        'type':'Ursine', 
+        'type':'Ursine-Weapon', 
         "Category": "Weapon",
         'weight':'2.31', 
         "price": 180,
@@ -63,7 +63,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineArmor',
         "name":"Ursine Enhanced Armor",
-        "Category": "Armor",
+        "Category": "Ursine-Armor",
         'type':'Ursine', 
         'weight':'5.46', 
         "price": 220,
@@ -73,7 +73,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineBoots',
         "name":"Enhanced Ursine Boots",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'1.74', 
         "price": 180,
@@ -83,7 +83,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineGauntlet',
         "name":"Enhanced Ursine Gauntlet",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'2.14', 
         "price": 170,
@@ -93,7 +93,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineTrousers',
         "name":"Enhanced Ursine Trousers",
-        'type':'Ursine', 
+        'type':'Ursine-Armor', 
         "Category": "Armor",
         'weight':'1.73', 
         "price": 190,
@@ -103,7 +103,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineSilverSword',
         "name": "Enhanced Ursine Silver Sword",
-        'type':'Ursine', 
+        'type':'Ursine-Weapon', 
         "Category": "Weapon",
         'weight':'3.01', 
         "price": 210,
@@ -113,7 +113,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedUrsineSteelSword',
         "name":"Enhanced Ursine Steel Sword",
-        'type':'Ursine', 
+        'type':'Ursine-Weapon', 
         "Category": "Weapon",
         'weight':'2.31', 
         "price": 190,
@@ -125,7 +125,7 @@ export const Weapons_Armor= [
         'id': 'FelineArmor',
         "name":"Feline Armor",
         "Category": "Armor",
-        'type':'Cat', 
+        'type':'Feline-Armor', 
         'weight':'3.27', 
         "price": 155,
         'Components':"1 × Shirt; 2 × Hardened leather; 1 × Powdered Monster tissue; 4 × Linen; 2 × hardened limber",
@@ -135,7 +135,7 @@ export const Weapons_Armor= [
     {
         'id': 'FelineBoots',
         "name":"Feline Boots",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'1.74', 
         "price": 140,
@@ -145,7 +145,7 @@ export const Weapons_Armor= [
     {
         'id': 'FelineGauntlets',
         "name":"Feline Gauntlet",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'2.41', 
         "price": 190,
@@ -155,7 +155,7 @@ export const Weapons_Armor= [
     {
         'id': 'FelineTrousers',
         "name":" Feline Trousers",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'1.78', 
         "price": 150,
@@ -165,7 +165,7 @@ export const Weapons_Armor= [
     {
         'id': 'FelineSilverSword',
         "name":"Feline Silver Sword",
-        'type':'Feline', 
+        'type':'Feline-Weapon', 
         "Category": "Weapon",
         'weight':'2.29', 
         "price": 210,
@@ -175,7 +175,7 @@ export const Weapons_Armor= [
     {
         'id': 'FelineSteelSword',
         "name":"Feline Steel Sword",
-        'type':'Feline', 
+        'type':'Feline-Weapon', 
         "Category": "Weapon",
         'weight':'2.31', 
         "price": 205,
@@ -185,7 +185,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineArmor',
         "name":"Enhanced Feline Armor",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'3.91', 
         "price": 240,
@@ -195,7 +195,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineBoots',
         "name":"Enhanced Feline Boots",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'3.91', 
         "price": 220,
@@ -205,7 +205,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineGauntlets',
         "name": "Enhanced Feline Gauntlet",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'2.41', 
         "price": 210,
@@ -215,7 +215,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineTrousers',
         "name":"Enhanced Feline Trousers",
-        'type':'Feline', 
+        'type':'Feline-Armor', 
         "Category": "Armor",
         'weight':'1.78', 
         "price": 190,
@@ -225,7 +225,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineSilverSword',
         "name":"Enhanced Feline Silver Sword",
-        'type':'Feline', 
+        'type':'Feline-Weapon', 
         "Category": "Weapon",
         'weight':'2.29', 
         "price": 245,
@@ -235,7 +235,7 @@ export const Weapons_Armor= [
     {
         'id': 'EnhancedFelineSteelSword',
         "name": "Enhanced Feline Steel Sword",
-        'type':'Feline', 
+        'type':'Feline-Weapon', 
         "Category": "Weapon",
         'weight':'2.31', 
         "price": 255,
