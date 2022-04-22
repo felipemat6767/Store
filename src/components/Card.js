@@ -7,8 +7,9 @@ import { Context } from '../store/appContext'
 export const ElementCard = ({ id, weight, Components, type, name, price }) => {
     const imagepath = `../images/${id}.jpg`
     const { actions } = useContext(Context)
+ 
     const add = () => {
-        actions.getAct(name, price)
+        actions.additems(name, price)
     }
     return (
         <div className="col col-sm-6 col-md-4">

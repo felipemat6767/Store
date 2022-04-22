@@ -5,11 +5,11 @@ import { Context } from '../store/appContext'
 export const Navbar = () => {
   const { store, actions } = useContext(Context)
 
-  const item = store.total.map((items, index) => {
+  const item = store.products.map((items, index) => {
     return (
-      <div key={items} >
-        <li key={items} className="d-flex">
-          {items}
+      <div key={items.producto.name} >
+        <li key={items.producto.name} className="d-flex">
+          {items.producto.name + ": " + items.producto.price}
           <i className="fas fa-trash-alt mx-1"
             onClick={() => { actions.removerItem(items, index) }}>
           </i>
@@ -52,9 +52,7 @@ export const Navbar = () => {
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
             <div className="dropdown-item p-0">
               <div className='p-1'>{item}</div>
-
             </div>
-
             <div className='mx-4'>Precio Total: {store.valortot}</div>
           </ul>
         </div>
