@@ -6,12 +6,13 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context)
 
   const item = store.products.map((items, index) => {
+    
     return (
       <div key={items.producto.name} >
         <li key={items.producto.name} className="d-flex">
           {items.producto.name + ": " + items.producto.price}
           <i className="fas fa-trash-alt mx-1"
-            onClick={() => { actions.removerItem(items, index) }}>
+            onClick={() => { actions.removerItem(items, index)}}>
           </i>
           <hr></hr>
         </li>

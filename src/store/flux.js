@@ -2,13 +2,13 @@ export const getState = ({ setStore, getStore, getActions }) => {
 
     return {
         store: {
+            category: "",
             items: [],
             total: [],
             valoritem: "",
             price: 0,
             valortot: 0,
             products: [],
-            valoract:0
         },
 
         actions: {
@@ -36,13 +36,17 @@ export const getState = ({ setStore, getStore, getActions }) => {
             removerItem: (items, index) => {
                 const store = getStore();
                 const nuevalista = store.products.filter((item, indice) => {
-                    setStore({valoract: store.valoract = item.producto.price})
-                    //setStore({ valortot: store.valortot - item.producto.price });
-                    console.log(store.valoract)
+                    if(indice === index){
+                        setStore({ valortot: store.valortot - items.producto.price});
+                    }
                     return indice !== index
                 })
                 
                 setStore({ products: nuevalista })
+            },
+            changecategory: (item) => {
+                const store = getStore();
+                setStore({category: store.category = item})
             }
 
 
