@@ -10,7 +10,6 @@ export const Weapons = () => {
   return (
     <div className='d-flex row'>
       <Filter />
-     
       <div className='col-10'>{(store.category === "Ursine") ? <Weaponsfilt type="Ursine-Weapon" /> : (store.category === "Feline") ? <Weaponsfilt type="Feline-Weapon" /> : (store.category === "Enhanced") ? <Tierfilt tier="Enhanced" /> : (store.category === "Base") ? <Tierfilt tier="Base" /> : <Toolslist category="Weapon" />}</div>
     </div>
   )

@@ -9,7 +9,7 @@ export const ElementCard = ({ id, weight, Components, type, name, price }) => {
     const { actions } = useContext(Context)
 
     const add = () => {
-        actions.additems(name, price)
+        actions.additems(name, price, imagepath)
     }
     return (
         <div className="col col-sm-6 col-md-4">

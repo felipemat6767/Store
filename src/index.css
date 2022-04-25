@@ -11,7 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*Color*/
 
+
+.colorcollapse{
+color: brown;
+font-family: sans-serif;
+}
+.color{
+  color: rgb(43, 0, 255);
+  border: none;
+  background-color: white;
+ 
+}
+
+/**/
 .img-intro{
   background-image: url("images/anuncio6.jpg");
   height: 400px;
@@ -45,12 +59,20 @@ code {
   height: 200px;
   width: 50%;
 }
-
+.imglist{
+  height: 40px;
+}
 .monster-card{
   max-height: 250px;
   max-width: 600px;
 }
-
+.text-items{
+  font-family: 'Courier New', Courier, monospace;
+}
+.text-length{
+  color: black;
+  font-weight: 800;
+}
 /*BG*/
 
 .bg-title{

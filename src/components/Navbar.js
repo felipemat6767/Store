@@ -6,17 +6,19 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context)
 
   const item = store.products.map((items, index) => {
-    
+
     return (
       <div key={items.producto.name} >
-        <li key={items.producto.name} className="d-flex">
+        <li key={items.producto.name} className="d-flex text-center">
+          <img src={`../images/${items.producto.imagepath}`} className="imglist mx-2" alt={items.producto.name} />
           {items.producto.name + ": " + items.producto.price}
           <i className="fas fa-trash-alt mx-1"
-            onClick={() => { actions.removerItem(items, index)}}>
+            onClick={() => { actions.removerItem(items, index) }}>
           </i>
-          <hr></hr>
         </li>
+        <hr></hr>
       </div>
+      
     )
   })
 
@@ -54,7 +56,7 @@ export const Navbar = () => {
             <div className="dropdown-item p-0">
               <div className='p-1'>{item}</div>
             </div>
-            <div className='mx-4'>Precio Total: {store.valortot}</div>
+            <div className='mx-4'>Precio Total: $ {store.valortot}</div>
           </ul>
         </div>
 

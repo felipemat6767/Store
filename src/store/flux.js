@@ -21,9 +21,9 @@ export const getState = ({ setStore, getStore, getActions }) => {
                 setStore({ total: store.total })
             },
 
-            additems: (item1, item2) => {
+            additems: (item1, item2, item3) => {
                 const store = getStore();
-                setStore({ products: store.products.concat({ producto: { name: item1, price: item2 }, cantidad: 1 })}, store.products)
+                setStore({ products: store.products.concat({ producto: { name: item1, price: item2, imagepath: item3 }, cantidad: 1 })}, store.products)
                 getActions().calcular()
             },
 
