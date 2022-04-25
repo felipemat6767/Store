@@ -26,24 +26,37 @@ font-family: sans-serif;
 }
 
 /**/
+.title-schools{
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+letter-spacing: 2px;
+background-color: slategray;
+color: #fff;
+padding: 20px;
+}
 .img-intro{
-  background-image: url("images/anuncio6.jpg");
+  background-image: url("C:\Users\felip\Desktop\store\public\images\Fondointro.jpg");
   height: 400px;
   -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         padding: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .intro-text{
   display: flex;
   flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-items: center;
   height: 100%;
-  margin: 0 auto;
+  margin: 100px auto;
   font-size: 40px;
-  color: white;
+  font-weight: 700;
+  color: rgb(185, 175, 68);
 }
 .card{
   box-sizing: border-box;
@@ -99,4 +112,118 @@ font-family: sans-serif;
   background-color: rgb(67, 67, 67, 0.5);
   color: white;
   padding: 10px;
+}
+
+/*Seccion Escuelas*/
+#equipo {
+  height: 100vh;
+  display: flex;
+}
+
+.persona {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.persona:hover {
+  flex-grow: 3
+}
+
+.persona:hover .persona-imagen {
+  filter: none;
+}
+.persona-info {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  /*De esta manera se evita que el texto aparezca*/
+  transition: all 0.1s;
+}
+
+.persona-info h2 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 3px rgba(236, 154, 154, 0.5);
+  /*Permite aplicar sombras al texto*/
+  font-weight: 800;
+}
+
+.persona:hover .persona-info {
+  opacity: 1;
+  bottom: 60px;
+  transition-delay: 0.2s;
+}
+.persona-info p {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+}
+.persona-imagen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  /*Esto se usa para centrar el contenido. Left lo mueve 50% a la izquierda y luego translate lo mueve 50% a la derecha. Se repite la tecnica anterior de position relative en el contenedor y absolute en el contenido*/
+  filter: grayscale(80%);
+}
+
+/*Seccion de Ingredientes*/
+
+#ingredientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingre {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+}
+
+.imagen-ingre {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.info-ingre {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.info-ingre span, .info-ingre p {
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.info-ingre:Hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.info-ingre:hover p {
+  transform: translateY(10px);
 }

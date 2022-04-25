@@ -13,7 +13,7 @@ export const MonsterCard = ({ id, name, type, description, susceptibility }) => 
                                 <span>{type}</span> 
                                 <p class="card-text">{description}.</p>
                                 <p class="card-text">{susceptibility}.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p class="card-text"><small class="text-muted"></small></p>
                             </div>
                     </div>
                 </div>

@@ -1,20 +1,20 @@
 import React from 'react'
 import { MonsterCard } from '../components/MonsterCard'
-import { getelementbyCategory } from '../selectors/getelementbyCategory'
-import { getMonster } from '../selectors/getMonster'
+import { getMonsterbyName } from '../selectors/getMonsterbyName'
 
 
-export const Monsterlist = ({ category }) => {
-    const monster = getMonster(category)
+
+export const MonsterSearch = ({ name }) => {
+    const monster = getMonsterbyName(name)
     return (
-        <>
-            <h1>{category} </h1>
+        <div className='my-4'>
+            <h1>{name} </h1>
             <div className='row rows-cols-1 row-cols-md-3 g-3'>
                 {monster.map(item => (
                     < MonsterCard key={item.id}
                         {...item} />
                 ))}
             </div>
-        </>
+        </div>
     )
 }

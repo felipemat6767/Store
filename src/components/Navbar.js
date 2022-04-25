@@ -4,21 +4,22 @@ import { Context } from '../store/appContext'
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context)
-
   const item = store.products.map((items, index) => {
 
     return (
       <div key={items.producto.name} >
-        <li key={items.producto.name} className="d-flex text-center">
+        <li key={items.producto.name} className="d-flex justify-content-center">
           <img src={`../images/${items.producto.imagepath}`} className="imglist mx-2" alt={items.producto.name} />
-          {items.producto.name + ": " + items.producto.price}
-          <i className="fas fa-trash-alt mx-1"
-            onClick={() => { actions.removerItem(items, index) }}>
-          </i>
+          <div className='mx-auto'>
+            {items.cantidad + " x " + items.producto.name + ": $" + items.producto.price}
+            <i className="fas fa-trash-alt my-1 mx-2"
+              onClick={() => { actions.removerItem(items, index) }}>
+            </i>
+          </div>
         </li>
         <hr></hr>
       </div>
-      
+
     )
   })
 
@@ -33,7 +34,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link className="navbar-brand" to="/">Navbar</Link>
+        <Link className="navbar-brand" to="/">Home</Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
@@ -56,7 +57,9 @@ export const Navbar = () => {
             <div className="dropdown-item p-0">
               <div className='p-1'>{item}</div>
             </div>
-            <div className='mx-4'>Precio Total: $ {store.valortot}</div>
+            
+            {store.valortot > 0 &&<div className='mx-4'>Precio Total: $ {store.valortot}</div>}
+            
           </ul>
         </div>
 
