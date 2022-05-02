@@ -46,10 +46,10 @@ export const ElementCard = ({ id, weight, Components, type, name, price }) => {
                                 <option value="5">5</option>
                             </select>
                             <div className='d-flex justify-content-around my-3'>
-                                <Link to={`/info/${name}`} className="btn">More Info</Link>
+                                <Link to={`/info/${name}`} className="btn-card">More Info</Link>
                                 <br></br>
-                                <div className="btn " 
-                                onClick={add}><i class="fas fa-plus"></i></div>
+                                <button className="btn-card" 
+                                onClick={add}><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
                     </div>

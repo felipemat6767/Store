@@ -38,17 +38,20 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="/Weapons">Weapons</a>
+              <Link className="nav-link" to="/Weapons">Weapons</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Armor">Armor</a>
+              <Link className="nav-link" to="/Armor">Armor</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Bestiary">Bestiary</a>
+              <Link className="nav-link" to="/Bestiary">Bestiary</Link>
             </li>
           </ul>
         </div>
-        <div class="btn-group">
+        <div className='btn-group mx-2'>
+          <Link type="button" className="btn btn-Login" to="/login">Login</Link>
+        </div>
+        <div className="btn-group">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-shopping-cart"></i>
             <span className="p-2 length">{item.length}</span>
@@ -57,9 +60,9 @@ export const Navbar = () => {
             <div className="dropdown-item p-0">
               <div className='p-1'>{item}</div>
             </div>
-            
-            {store.valortot > 0 &&<div className='mx-4'>Precio Total: $ {store.valortot}</div>}
-            
+
+            {store.valortot > 0 && <div className='mx-4'>Precio Total: $ {store.valortot}</div>}
+
           </ul>
         </div>
 

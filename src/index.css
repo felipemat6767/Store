@@ -11,43 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 /*Color*/
 
 
-.colorcollapse{
-color: brown;
-font-family: sans-serif;
+.colorcollapse {
+  color: brown;
+  font-family: sans-serif;
 }
-.color{
+
+.color {
   color: rgb(43, 0, 255);
   border: none;
   background-color: white;
- 
+
 }
 
 /**/
-.title-schools{
-text-align: center;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-letter-spacing: 2px;
-background-color: slategray;
-color: #fff;
-padding: 20px;
+.title-schools {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  background-color: slategray;
+  color: #fff;
+  padding: 20px;
 }
-.img-intro{
-  background-image: url("C:\Users\felip\Desktop\store\public\images\Fondointro.jpg");
+
+.img-intro {
+  background-image: url("../public/images/Fondointro.jpg");
   height: 400px;
   -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        padding: 50px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 50px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.intro-text{
+.intro-text {
   display: flex;
   flex-direction: column;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -58,49 +61,60 @@ padding: 20px;
   font-weight: 700;
   color: rgb(185, 175, 68);
 }
-.card{
+
+.card {
   box-sizing: border-box;
 
 }
-.card-info{
+
+.card-info {
   height: 450px;
   align-items: center;
   text-align: center;
   width: 50%;
 }
-.img-info{
+
+.img-info {
   height: 200px;
   width: 50%;
 }
-.imglist{
+
+.imglist {
   height: 40px;
 }
-.monster-card{
+
+.monster-card {
   max-height: 250px;
   max-width: 600px;
 }
-.text-items{
+
+.text-items {
   font-family: 'Courier New', Courier, monospace;
 }
-.text-length{
+
+.text-length {
   color: black;
   font-weight: 800;
 }
+
 /*BG*/
 
-.bg-title{
+.bg-title {
   background-color: rgb(142, 162, 240);
   margin: 0;
 }
-.bg-inf{
+
+.bg-inf {
   background-color: rgb(236, 236, 236);
   height: 100%;
 }
-.bg-filt{
+
+.bg-filt {
   background-color: rgb(213, 213, 212);
-  
+
 }
-.bg-data{
+
+.bg-data {
   padding: 0;
   width: 100%;
   background-color: rgb(218, 219, 237);
@@ -108,10 +122,17 @@ padding: 20px;
   margin: 0;
 }
 
-.btn{
-  background-color: rgb(67, 67, 67, 0.5);
+
+.btn-Login {
+  background-color: rgba(102, 102, 205, 0.5);
+  color: white;
+}
+
+.btn-card {
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
+  text-decoration: none;
 }
 
 /*Seccion Escuelas*/
@@ -134,6 +155,7 @@ padding: 20px;
 .persona:hover .persona-imagen {
   filter: none;
 }
+
 .persona-info {
   position: absolute;
   bottom: 10px;
@@ -157,6 +179,7 @@ padding: 20px;
   bottom: 60px;
   transition-delay: 0.2s;
 }
+
 .persona-info p {
   color: white;
   font-size: 20px;
@@ -166,6 +189,7 @@ padding: 20px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
 }
+
 .persona-imagen {
   height: 100%;
   width: 100%;
@@ -211,7 +235,8 @@ padding: 20px;
   transition: all 0.3s;
 }
 
-.info-ingre span, .info-ingre p {
+.info-ingre span,
+.info-ingre p {
   align-items: center;
   text-align: center;
   font-size: 28px;
@@ -226,4 +251,109 @@ padding: 20px;
 
 .info-ingre:hover p {
   transform: translateY(10px);
+}
+
+/*Contact*/
+.fondo-form {
+
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+}
+
+.form {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  padding: 50px;
+  background-color: rgb(97, 182, 201);
+}
+
+.two-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-text,
+.input-email,
+.text-area {
+  border: 1px solid #b4b4b4;
+  color: #888;
+  background: #fff;
+  outline: none;
+  padding: 15px 60px;
+  height: 45px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.text-area {
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+.input-text,
+.input-email {
+  width: 100%;
+}
+
+.inputconicon {
+  position: relative;
+  width: 48%;
+  /*Con 48% deja espacio entre nombre y email*/
+}
+
+.inputconicon i {
+  position: absolute;
+  left: 0px;
+  padding: 15px 15px;
+  background: #888;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.textareaicon {
+  width: 100%;
+  height: 100%;
+}
+
+.textareaicon i {
+  background: transparent;
+  color: #888;
+  padding: 0;
+  font-size: 25px;
+  left: 17px;
+  top: 13px;
+  transition: all 0.5s;
+  
+}
+
+.inputconicon input:focus,
+.inputconicon textarea:focus {
+  border: 1px solid rebeccapurple;
+}
+
+.inputconicon input:focus+i {
+  background: rgb(25, 22, 22);
+}
+
+.inputconicon textarea:focus+i {
+  color: var(--color-primario);
+}
+
+.btn-input {
+  display: flex;
+  justify-content: flex-end;
+  background-color: brown;
+  transition: all 0.4s;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+.btn-input:hover {
+  background-color: rgb(95, 25, 25);
+  font-weight: 600;
+  color: aliceblue;
 }
