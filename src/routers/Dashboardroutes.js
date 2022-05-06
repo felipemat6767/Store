@@ -1,11 +1,28 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
+import { startChecking } from "../actions/auth";
 import { Intro } from "../components/Intro";
 import { Armor } from "../views/Armor";
 import { Bestiary } from "../views/Bestiary"
 import { Info } from "../views/Info";
 import Login from "../views/Login";
 import { Weapons } from "../views/Weapons.js";
+
 export const DashboardRoutes = () => {
+    const dispatch = useDispatch();
+    const { checking } = useSelector(state => state.auth)
+    useEffect(() => {
+
+        dispatch(startChecking())
+
+    }, [dispatch])
+
+    if (checking) {
+        return (
+            <h5>Loading ... </h5>
+        )
+    }
     return (
         <>
             <div className="container">
