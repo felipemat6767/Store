@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { Context } from '../store/appContext'
 
 
 
 export const ElementCard = ({ id, weight, Components, type, name, price }) => {
+    const dispatch = useDispatch()
+    let { uid }  = useSelector(state => state.auth)
     const imagepath = `../images/${id}.jpg`
     const { actions } = useContext(Context)
  
@@ -22,7 +25,7 @@ export const ElementCard = ({ id, weight, Components, type, name, price }) => {
 
     const totalprice = itemquantity * price
     const add = () => {
-        itemquantity >= 1 ? actions.additems(name, totalprice, imagepath, itemquantity): alert("Debe seleccionar minimo un item")
+        uid ? itemquantity >= 1 ? actions.additems(name, totalprice, imagepath, itemquantity): alert("Debe seleccionar minimo un item"): alert("You must be Logged in to add elements to your Cart")
     }
     return (
         <div className="col col-sm-6 col-md-4">

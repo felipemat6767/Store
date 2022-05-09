@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { startLogout } from '../actions/auth'
 import { Context } from '../store/appContext'
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context)
+  const dispatch = useDispatch()
   const item = store.products.map((items, index) => {
 
     return (
@@ -26,12 +28,17 @@ export const Navbar = () => {
 
 
 
+const handleLogout = () => {
+  dispatch(startLogout())
+}
   useEffect(() => {
     actions.getItem()
 
   }, [])
 
-  const { name } = useSelector(state => state.auth)
+ const { name } = useSelector(state => state.auth)
+ let {uid}  = useSelector(state => state.auth)
+  console.log(uid)
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,7 +58,11 @@ export const Navbar = () => {
             </ul>
           </div>
           <div className='btn-group mx-2'>
-            <Link type="button" className="btn btn-Login" to="/login">Login</Link>
+            
+            {!uid  ? <Link type="button" className="btn btn-Login" to="/login">Login</Link>: uid && <Link className='btn btn-outline-danger' onClick={handleLogout} to ="/">
+              <i className='fas fa-sign-out-alt'></i>
+              <span>Logout</span>
+            </Link>}
           </div>
           <div className="btn-group">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
