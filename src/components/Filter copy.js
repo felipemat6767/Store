@@ -2,7 +2,7 @@ import React, { useContext} from 'react'
 import { Context } from '../store/appContext'
 
 export const Filtercopy = () => {  
-    const { store, actions} = useContext(Context)
+    const { actions} = useContext(Context)
     return (
         <div className='d-flex flex-column'>
             <div className='mt-2'>
@@ -32,6 +32,21 @@ export const Filtercopy = () => {
                     <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={() => { actions.changecategory("Base")}}/>
                     <label className="form-check-label" for="flexRadioDefault">
                         Base
+                    </label>
+                </div>
+            </div>
+            <div className='mt-2'>
+                <h5>Price</h5>
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  onClick={() => { actions.changecategory("MtoL")}} />
+                    <label className="form-check-label" for="flexRadioDefault">
+                        Most expensive to Least expensive
+                    </label>
+                </div>
+                <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={() => { actions.changecategory("LtoM")}} />
+                    <label className="form-check-label" for="flexRadioDefault">
+                        Least expensive to Most expensive
                     </label>
                 </div>
             </div>

@@ -5,6 +5,8 @@ import { Tierfilt } from '../tools/tierfilt'
 import { Toolslist } from '../tools/toolslist'
 import { Context } from '../store/appContext'
 import { Filtercopy } from '../components/Filter copy'
+import { PriceLtoM, PriceMtoL } from '../tools/Pricefilt'
+
 
 export const Armor = () => {
   const { store } = useContext(Context)
@@ -25,7 +27,7 @@ export const Armor = () => {
       </div>
       <div className='d-flex row'>
         <div className='col-1'></div>
-        <div className='col-10'>{(store.category === "Ursine") ? <Armorfilt type="Ursine-Armor" /> : (store.category === "Feline") ? <Armorfilt type="Feline-Armor" /> : (store.category === "Enhanced") ? <Tierfilt tier="Enhanced" /> : (store.category === "Base") ? <Tierfilt tier="Base" /> : <Toolslist category="Armor" />}</div>
+        <div className='col-10'>{(store.category === "Ursine") ? <Armorfilt type="Ursine-Armor" /> : (store.category === "Feline") ? <Armorfilt type="Feline-Armor" /> : (store.category === "Enhanced") ? <Tierfilt tier="Enhanced" /> : (store.category === "Base") ? <Tierfilt tier="Base" /> : (store.category === "MtoL") ? <PriceMtoL /> :  (store.category === "LtoM") ? <PriceLtoM /> : <Toolslist category="Armor" />}</div>
       </div>
     </div>
   )

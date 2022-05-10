@@ -6,7 +6,6 @@ import { Context } from '../store/appContext'
 
 
 export const ElementCard = ({ id, weight, Components, type, name, price }) => {
-    const dispatch = useDispatch()
     let { uid }  = useSelector(state => state.auth)
     const imagepath = `../images/${id}.jpg`
     const { actions } = useContext(Context)
