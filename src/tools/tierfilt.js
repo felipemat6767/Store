@@ -1,6 +1,7 @@
 import { ElementCard } from '../components/Card'
-import { getelementbyTier } from '../selectors/getElementbyTier'
-import { getElementbytype } from '../selectors/getElementbytype'
+import { getelementbyCategory } from '../selectors/getelementbyCategory'
+import { getElementbyBaseTier, getElementbyEnhancedTier, getelementbyTier } from '../selectors/getElementbyTier'
+
 
 
 export const Tierfilt = ({ tier }) => {
@@ -13,6 +14,34 @@ export const Tierfilt = ({ tier }) => {
                     < ElementCard key={item.id}
                         {...item} />
                 ))}
+            </div>
+        </>
+    )
+}
+
+export const TiersEnhanced = ({category}) => {
+    const categories = getelementbyCategory(category)
+    //const MtoL = getElementbypriceMtoL( tools)
+    //const tier = getelementbyTier(categories)
+    const tiersfilt = getElementbyEnhancedTier(categories)
+    return (
+        <>
+         <span className='text-items'>There are <span className='text-length'>{tiersfilt.length}</span> items available</span>
+         <div className='row rows-cols-1 row-cols-md-3 g-3'>
+               {tiersfilt}
+            </div>
+        </>
+    )
+}
+
+export const TiersBase = ({category}) => {
+    const categories = getelementbyCategory(category)
+    const tiersfilt = getElementbyBaseTier(categories)
+    return (
+        <>
+         <span className='text-items'>There are <span className='text-length'>{tiersfilt.length}</span> items available</span>
+         <div className='row rows-cols-1 row-cols-md-3 g-3'>
+               {tiersfilt}
             </div>
         </>
     )

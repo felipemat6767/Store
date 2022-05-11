@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import { Filter } from '../components/Filter'
 import { Armorfilt } from '../tools/Armorfilt'
-import { Tierfilt } from '../tools/tierfilt'
+import {  TiersEnhanced, TiersBase } from '../tools/tierfilt'
 import { Toolslist } from '../tools/toolslist'
 import { Context } from '../store/appContext'
 import { Filtercopy } from '../components/Filter copy'
-import { PriceLtoM, PriceMtoL } from '../tools/Pricefilt'
+import { PriceLtoM, PriceMtoL2 } from '../tools/Pricefilt'
 
 
 export const Armor = () => {
@@ -27,7 +26,7 @@ export const Armor = () => {
       </div>
       <div className='d-flex row'>
         <div className='col-1'></div>
-        <div className='col-10'>{(store.category === "Ursine") ? <Armorfilt type="Ursine-Armor" /> : (store.category === "Feline") ? <Armorfilt type="Feline-Armor" /> : (store.category === "Enhanced") ? <Tierfilt tier="Enhanced" /> : (store.category === "Base") ? <Tierfilt tier="Base" /> : (store.category === "MtoL") ? <PriceMtoL /> :  (store.category === "LtoM") ? <PriceLtoM /> : <Toolslist category="Armor" />}</div>
+        <div className='col-10'>{(store.category === "Ursine") ? <Armorfilt type="Ursine-Armor" /> : (store.category === "Feline") ? <Armorfilt type="Feline-Armor" /> : (store.category === "Enhanced") ? <TiersEnhanced category="Armor" /> : (store.category === "Base") ? <TiersBase category ="Armor" /> : (store.category === "MtoL") ? <PriceMtoL2 category="Armor" /> :  (store.category === "LtoM") ? <PriceLtoM category="Armor"/> : <Toolslist category="Armor" />}</div>
       </div>
     </div>
   )
