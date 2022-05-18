@@ -8,14 +8,14 @@ export const Info = () => {
     const { Components, price, weight, tier, name, id } = Element
     const imagepath = `../images/${id}.jpg`
     return (
-        <div className="card card-info" >
+        <div className="card card-info mx-auto mt-3 h-75" >
             <img src={imagepath} className="card-img-top img-info" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{Components}</p>
-                    <p className="card-text">{weight}</p>
-                    <p className="card-text">{tier}</p>
-                    <p className="card-text">{price}</p>
+                <div className="">
+                    <h5 className="card-title"><span className='text-desc'>Nombre: </span>{name}</h5>
+                    <p className="card-text "><span className='text-desc'>Components: </span>{Components}</p>
+                    <p className="card-text"><span className='text-desc'>Weight: </span>{weight}</p>
+                    <p className="card-text"><span className='text-desc'>Tier: </span>{tier}</p>
+                    <p className="card-text"><span className='text-desc'>Price: </span>{price}</p>
                 </div>
         </div>
     )

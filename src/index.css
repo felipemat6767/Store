@@ -357,3 +357,18 @@ code {
   font-weight: 600;
   color: aliceblue;
 }
+
+/*Card*/
+
+.card-text{
+  background-color: antiquewhite;
+  border: 1px solid black;
+  margin: 0;
+  padding: 6px;
+  color: white;
+  font-weight: 700;
+}
+
+.text-desc{
+ color: black !important; 
+}
